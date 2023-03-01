@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "maxseq" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "maxseq" ]
 
 jobs:
   build:
@@ -13,9 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
-    - name: configure
-      run: ./configure
 
     - name: Install dependencies
       run: make
